@@ -1,0 +1,374 @@
+/* Steven Haenchen 03/30/2025 */
+
+/* Global Elements */
+
+/* universal id selector */
+* {
+  box-sizing: border-box;
+}
+
+/* MOBILE FIRST SETTINGS */
+body {
+  color: #555555;
+  background-color: #eaeaea;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Within the body */
+#wrapper {
+  background-color: #ffffff;
+}
+
+header {
+  background: #110b4b;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 4em;
+  color: #ffffff;
+  line-height: 2em;
+  text-align: left;
+  padding-top: 3px;
+  padding-bottom: 0.5em;
+  letter-spacing: 0.25em;
+  box-shadow: 3px 3px #333333;
+  border: 1px solid #000033;
+}
+
+
+header a {
+  color: white;
+  /* restore color overwritten by webkit-color */
+}
+
+nav {
+  font-weight: bold;
+  background-color: #ffffff;
+  text-align: center;
+  padding: 0px;
+  /* mobile */
+  font-size: 120%;
+}
+
+nav a {
+  text-decoration: none;
+  /* remove underlines */
+  transition: color 3s ease-out;
+}
+
+nav ul {
+  marker: none;
+  margin: 0px;
+  font-size: 0.8em;
+  /* mobile */
+  padding-left: 0px;
+  /* mobile */
+  list-style-type: none;
+}
+
+nav li {
+  border-bottom: 1px solid #29485d;
+}
+
+/* pseudo-classes */
+/* also focus and active */
+
+nav a:link {
+  color: #0194b5;
+}
+
+nav a:visited {
+  color: #29485d;
+}
+
+nav a:hover {
+  color: #c6d02f;
+}
+
+header a:link {
+  color: white;
+}
+
+header a:visited {
+  color: white;
+}
+
+header a:hover {
+  color: #c6d02f;
+}
+
+main {
+  padding: 1px 20px 20px 20px;
+  display: block;
+  background-color: white;
+  overflow: auto;
+}
+
+h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  margin-bottom: 0;
+  margin-top: 0;
+  /* padding-top: 1em; mobile */
+  /* line-height: 1em; */
+}
+
+h2 {
+  color: #407386;
+  font-family: Georgia, "Times New Roman", serif;
+  text-shadow: 1px 1px #cccccc;
+  text-align: center;
+}
+
+h3 {
+  color: #29485d;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+dt {
+  color: #0194b5;
+}
+
+main ul {
+  list-style-image: url("marker.gif");
+}
+
+li {
+  line-height: 100%;
+  /* mobile */
+}
+
+footer {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 75%;
+  font-style: italic;
+  text-align: center;
+  padding: 2em;
+  background-color: #ffffff;
+}
+
+.web {
+  color: #0194b5;
+  font-weight: bold;
+}
+
+/* id level specific */
+
+#contact {
+  font-size: 90%;
+}
+
+table {
+  border: 2px solid #29485d;
+  border-collapse: collapse;
+  margin: auto;
+}
+
+td, th {
+  padding: 0.5em;
+  border: 2px solid #29485d;
+}
+
+td {
+  text-align: center;
+}
+
+footer td {
+  content: '';
+  width: 40%;
+}
+
+.text {
+  text-align: left;
+}
+
+tr:nth-of-type(odd) {
+  background-color:  rgba(242, 207, 19, 0.4);
+}
+
+tr:nth-of-type(even) {
+  background-color: rgba(1, 148, 181, 0.4);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+form label, form input {
+  margin-bottom: 0.5em;
+}
+
+iframe {
+  float: right;
+  margin: 1em;
+}
+
+.centercenter {
+  text-align: center;
+  padding: 5em 5em 5em 5em;
+  color: red;
+  font-weight: bold;
+  font-size: 300%;
+}
+
+.dropmenu nav {
+  background-color: #00005d;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  text-align: right;
+  padding-right: 2em;
+}
+
+.dropmenu nav ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+.dropmenu nav li {
+  padding: 0.5em;
+  display: inline-block;
+}
+
+.dropmenu nav a {
+  text-decoration: none;
+  display: block;
+}
+
+.dropmenu nav a:link {
+  color: #FFF;
+}
+
+.dropmenu nav a:visited {
+  color: purple;
+}
+
+.dropmenu nav a:hover {
+  color: #c6d02f;
+}
+
+.dropmenu nav ul ul {
+  position: absolute;
+  background-color: #5564A0;
+  padding: 0;
+  text-align: left;
+  display: none;
+}
+
+.dropmenu nav ul ul li {
+  border: 1px solid #00005d;
+  display: block;
+  width: 8em;
+  padding-left: 1em;
+  margin-left: 0;
+}
+
+.dropmenu nav li:hover ul {
+  display: block;
+}
+
+ol li {
+  text-align: left;
+}
+#thispage, #thispage1 {
+  /* Changes to the menu button when marked as already being on the referenced page */
+  color: lightgrey;
+  font-size: 75%;
+  /* display: none; */
+}
+
+/* #### Tablets Portrait or Landscape #### */
+@media screen and (min-width: 800px) {
+  body {
+    background: #0194b5;
+    background-image: linear-gradient(to bottom, #ffffff, #0194b5);
+    background-repeat: no-repeat;
+  }
+
+  header {
+    height: 120px;
+    padding-top: 30px;
+  }
+
+  section {
+    margin-left: 5px;
+    margin-right: 5px;
+    flex: 1;
+  }
+
+  .flow {
+    display: flex;
+    flex-direction: row;
+  }
+
+  nav {
+    background-color: #ffffff;
+    padding: 1em;
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: nowrap;
+    /* default wrap */
+    flex-direction: row;
+    /* default row */
+    justify-content: space-around;
+    /* align-items: center; */
+    list-style-type: none;
+    font-size: 1.2em;
+  }
+
+  nav li {
+    border-bottom: none;
+  }
+
+  form {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 6em 1fr;
+    gap: 1em;
+    width: 60%;
+    max-width: 30em;
+  }
+
+  input[type="submit"] {
+    grid-column: 2/3;
+    width: 10em;
+    margin-left: 0;
+  }
+
+}
+
+@media screen and (min-width: 1250px) {
+  #wrapper {
+    width: 80%;
+    margin: auto;
+    /* else left aligned */
+    box-shadow: 3px 3px #333333;
+    border: 1px solid #000033;
+  }
+
+  header {
+    background-position: right;
+    background-repeat: no-repeat;
+    text-align: left;
+    height: 120px;
+  }
+
+  h1 {
+    font-size: 2em;
+    letter-spacing: 0.1em;
+    margin-right: 2em;
+    margin-left: 2em;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: center;
+  }
+
+  header h1 {
+    margin-right: 25%;
+  }
+
+  .makeRed {
+    background-color: #db1919;   
+  }
+}

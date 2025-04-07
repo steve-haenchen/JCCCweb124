@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Steven Haenchen
+  JCCC Web 124 Spring 2025
+  Source: Wes Bos' JavaScript30 course
+            08 - Fun With HTML Canvas
+    Due: 4/06/2025
+-->
+<!--
+  Notes from Wes Bos' video on project
+    In js, we get the canvas from HTML (1) but we actually draw on a "context" (2)
+      (1) const canvas = document.querySelector('#draw');
+      (2) const ctx = canvas.getContext('2d');
+    Color values can be found using https://mothereffinghsl.com/
+    Recommended website for globalCompositeOperation (and other canvas operations) -> 
+      https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
+  Improvements:
+    1. Add button to turn on/off line sizing
+    2. Add dropdown for color (or changing color)
+    3. Add dropdown for line endings
+    4. Add dropdown for globalCompositeOperations options
+    5. Add button to play a pictionary-type game.
+-->
+
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 Canvas</title>
+  <link rel="icon" href="https://fav.farm/✅" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="menuOptions">
+  <input type="checkbox" id="lineSizing" name="lineSizing" value="yes">Line Sizing &nbsp;&nbsp;&nbsp;</input>
+  <label for="colors">&nbsp;Choose a color scheme:</label>
+  <select name="colors" id="colors">
+    <option value="red">Red</option>
+    <option value="lightblue">Light Blue</option>
+    <option value="green">Green</option>
+    <option value="yellow">Yellow</option>
+    <option value="blue">Blue</option>
+    <option value="violet">Violet</option>
+    <option value="changing">Changing</option>
+  </select> 
+  <label for="lineEnding">&nbsp;Choose a line ending scheme:</label>
+  <select name="lineEnding" id="lineEnding">
+    <option value="round">Round</option>
+    <option value="butt">Butt</option>
+    <option value="square">Square</option>
+  </select> 
+  <label for="gco">&nbsp;Choose a global composite operations scheme:</label>
+  <select name="gco" id="gco">
+    <option value="source-over">source-over</option>
+    <option value="source-in">source-in</option>
+    <option value="source-out">source-out</option>
+    <option value="source-atop">source-atop</option>
+    <option value="destination-over">destination-over</option>
+    <option value="destination-in">destination-in</option>
+    <option value="destination-out">destination-out</option>
+    <option value="destination-atop">destination-atop</option>
+    <option value="lighter">lighter</option>
+    <option value="copy">copy</option>
+    <option value="xor">xor</option>
+    <option value="screen">screen</option>
+    <option value="overly">overlay</option>
+    <option value="darken">darken</option>
+    <option value="lighten">lighten</option>
+    <option value="color-dodge">color-dodge</option>
+    <option value="color-burn">color-burn</option>
+    <option value="hard-light">hard-light</option>
+    <option value="soft-light">soft-light</option>
+    <option value="difference">difference</option>
+    <option value="exclusion">exclusion</option>
+    <option value="hue">hue</option>
+    <option value="saturation">saturation</option>
+    <option value="color">color</option>
+    <option value="luminosity">luminosity</option>
+    <option value="multiply">multiply</option>
+    <option value="multiply">default</option>
+  </select> 
+  &nbsp;&nbsp;
+  <button id="picClear" name="picClear" type="button">&nbsp;Clear the Drawing Canvas</button>
+  &nbsp;&nbsp;
+  <button id="pic2draw" name="pic2draw" type="button">&nbsp;Click for a picture to draw</button>
+</div>
+
+
+<canvas id="draw" width="800" height="800"></canvas>
+<script src="main.js"></script>
+</body>
+</html>
