@@ -132,6 +132,7 @@ if (movienum > 0 && movienum < 3) {
 }
 const autonum = parseInt(urlParams.get("auto"));
 if (autonum > 0) {
-  video.muted = true;
+  videomute = true;
+  video.muted = videomute;
   video.play();
 }
