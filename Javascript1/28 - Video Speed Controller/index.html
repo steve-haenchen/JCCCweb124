@@ -1,5 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Steven Haenchen
+  JCCC Web 124 Spring 2025
+  Source: Wes Bos' JavaScript30 course
+            28 - Video Speed Controller
+    Due: 4/27/2025
+-->
+<!--
+  Notes from Wes Bos' video on project
+    The focus of this project was adding a video speed scroll bar to a video player to allow easy speed up and/or slow
+      down of the video and audio.
+    By default, the video player already has start/stop/set position bar, volume, and full-screen options
+
+  Enhancements:
+    1. Set the color of the scroll bar to change from blue (slow) through green and yellow to res(fast).
+    2. Allow for playback in reverse as noted on https://www.geeksforgeeks.org/how-to-play-video-in-reverse-in-html5/
+        (when speed = minimum)
+
+  
+-->
 <head>
   <meta charset="UTF-8">
   <title>Video Speed Scrubber</title>
@@ -9,31 +28,13 @@
 <body>
 
   <div class="wrapper">
-    <video class="flex" width="765" height="430" src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" loop controls></video>
+    <!-- <video class="flex" width="765" height="430" src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" loop controls></video> -->
+    <video class="flex" width="765" height="430" src="../11 - Custom Video Player/playMe1.mp4" loop controls></video>
     <div class="speed">
       <div class="speed-bar">1×</div>
     </div>
   </div>
 
-<script>
-  const speed = document.querySelector('.speed');
-  const bar = speed.querySelector('.speed-bar');
-  const video = document.querySelector('.flex');
-
-  function handleMove(e) {
-      const y = e.pageY - this.offsetTop;
-      const percent = y / this.offsetHeight;
-      const min = 0.4;
-      const max = 4;
-      const height = Math.round(percent * 100) + '%';
-      const playbackRate = percent * (max - min) + min;
-      bar.style.height = height;
-      bar.textContent = playbackRate.toFixed(2) + '×';
-      video.playbackRate = playbackRate;
-    }
-
-  speed.addEventListener('mousemove', handleMove);
-
-</script>
+   <script src="main.js"></script>
 </body>
 </html>
