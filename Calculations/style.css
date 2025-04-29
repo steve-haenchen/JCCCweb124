@@ -1,0 +1,164 @@
+/*  Steven Haenchen
+    JCCC Web 124 Spring 2025
+    Final Project
+    Due: 5/6/2025
+*/
+
+/* Global Elements */
+
+/* universal id selector */
+* {
+  box-sizing: border-box;
+}
+
+/* MOBILE FIRST SETTINGS */
+body {
+  color: #555555;
+  background-color: #eaeaea;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Within the body */
+#wrapper {
+  background-color: #ffffff;
+}
+
+header {
+  background: #110b4b;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 4em;
+  color: #ffffff;
+  line-height: 2em;
+  text-align: center;
+  padding-top: 3px;
+  padding-bottom: 0.5em;
+  letter-spacing: 0.25em;
+  box-shadow: 3px 3px #333333;
+  border: 1px solid #000033;
+}
+
+
+header a {
+  color: white;
+  /* restore color overwritten by webkit-color */
+}
+
+header a:link {
+  color: white;
+}
+
+header a:visited {
+  color: white;
+}
+
+header a:hover {
+  color: #c6d02f;
+}
+
+main {
+  padding: 1px 20px 20px 20px;
+  display: block;
+  background-color: white;
+  overflow: auto;
+}
+
+h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  margin-bottom: 0;
+  margin-top: 0;
+  /* padding-top: 1em; mobile */
+  /* line-height: 1em; */
+}
+
+/* id level specific */
+
+table {
+  border: 2px solid #29485d;
+  border-collapse: collapse;
+  margin: auto;
+}
+
+td, th {
+  padding: 0.5em;
+  border: 2px solid #29485d;
+}
+
+td {
+  text-align: center;
+}
+
+tr:nth-of-type(odd) {
+  background-color:  rgba(242, 207, 109, 0.4);
+}
+
+tr:nth-of-type(even) {
+  background-color: rgba(1, 148, 181, 0.4);
+}
+
+#num {
+text-align: right;
+}
+
+/* #### Tablets Portrait or Landscape #### */
+@media screen and (min-width: 800px) {
+  body {
+    background: #0194b5;
+    background-image: linear-gradient(to bottom, #ffffff, #0194b5);
+    background-repeat: no-repeat;
+  }
+
+  header {
+    height: 120px;
+    padding-top: 30px;
+  }
+
+  section {
+    margin-left: 5px;
+    margin-right: 5px;
+    flex: 1;
+  }
+
+  tr:nth-of-type(odd) {
+    background-color:  rgba(242, 207, 69, 0.6);
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  #wrapper {
+    width: 80%;
+    margin: auto;
+    /* else left aligned */
+    box-shadow: 3px 3px #333333;
+    border: 1px solid #000033;
+  }
+
+  header {
+    background-position: right;
+    background-repeat: no-repeat;
+    text-align: left;
+    height: 120px;
+  }
+
+  h1 {
+    font-size: 2em;
+    letter-spacing: 0.1em;
+    margin-right: 2em;
+    margin-left: 2em;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: center;
+  }
+
+  header h1 {
+    margin-right: 25%;
+  }
+
+  tr:nth-of-type(odd) {
+    background-color:  rgba(242, 207, 19, 0.8);
+  }
+
+  .makeRed {
+    background-color: #db1919;   
+  }
+}

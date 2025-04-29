@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Steven Haenchen
+  JCCC Web 124 Spring 2025
+    Final Project
+    Due: 5/6/2025
+-->
+<!--
+  Instructions:
+You are to create a web-based calculator in the browser:
+1. In your HTML file, add an h1 element with the text JavaScript calculator.
+2. In your HTML file, add an input element with type="number" and id="num" attribute.
+3. Add a label element with appropriate text as well as a for attribute to connect the label to the input element. Implicit label
+  assignment is acceptable as well.
+4. Add a button element with the text Calculate!
+5. Add 4 paragraphs with the text addition , subtraction , multiplication , and division .
+6. Give each of the 4 paragraphs an appropriate id value.
+7. Using JavaScript, build a function using a for loop, and the += operator, build a string to add 1 through 10 to whatever value the
+  user has entered into the input box and assign the finalstring to the addition html paragraph.
+8. Using JavaScript, build a function using a while loop, and the += operator, build a string to subtract 1 through 10 to whatever
+  value the user has entered into the input box and assign the final string to the subtraction html paragraph.
+9. Using JavaScript, build a function using a do while loop, and the += operator, build a string to multiply 1 through 10 to whatever
+  value the user has entered into the input box and assign the final string to the multiplication html paragraph.
+10. Using JavaScript, build a function using your choice of a loop construct, and the += operator, build a string to divide 1 through 10
+  to whatever value the user has entered into the input box and assign the final string to the division html paragraph.
+11. Use the .toFixed(2) method to return only two digits to the right of the decimal point in the division function.
+12. Build a function that runs all four of the previous functions and attach it to the click event of the button. Use dynamic event
+  listeners (ie. do not use the `onclick` HTML property).
+13. Style your HTML with a new, linked style sheet using responsive principles and best practices.
+14. Include a couple of basic media queries to make the page render well on a tablet and phone device.
+15. Include an appropriate meta viewport tag in the HTML.
+-->
+<head>
+  <title>JCCC Web 124-300 Spring 2025 JAVASCRIPT 2</title>
+  <!-- identify the character set to allow browser to identify how to interpret your character data -->
+  <meta charset="utf-8" />
+  <meta name="description" content="Web-124 Javascript Final Project" />
+  <meta name="keywords" content="html css javascript" />
+  <meta name="author" content="Steve Haenchen" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Pass references to other files like CSS and JS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+      <a href="index.html">
+        <h1>Javascript calculator</h1>
+      </a>
+    </header>
+    <main>
+      <br/>
+      <label for="num">Enter your desired number!:&nbsp;</label>
+      <input id="num" type="number" name="num" />
+      &nbsp;&nbsp;
+      <button class="calcbutton" title="Press to Calculate" id="calc" name="calc">Calculate!</button>
+      <br/><br/>
+      <table>
+        <tr>
+          <td>
+            <p id="add">addition</p>
+          </td>
+          <td>
+            <p id="sub">subtraction</p>
+          </td>
+          <td>
+            <p id="mul">multiplication</p>
+          </td>
+          <td>
+            <p id="div">division</p>
+          </td>
+        </tr>
+      </table>
+    </main>
+  </div> 
+   <script src="main.js"></script>
+</body>
+</html>
